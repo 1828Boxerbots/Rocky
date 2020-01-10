@@ -13,6 +13,5 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "C_Cpp.default.configurationProvider": "vscode-wpilib",
-  "git.ignoreLimitWarning": true
+  "C_Cpp.default.configurationProvider": "vscode-wpilib"
 }

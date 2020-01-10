@@ -5,17 +5,16 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "Pickup.h"
-#include "../RobotMap.h"
+#pragma once
 
-Pickup::Pickup() : Subsystem("ExampleSubsystem") {
+#include <frc/commands/Command.h>
 
-}
-
-void Pickup::InitDefaultCommand() {
-	// Set the default command for a subsystem here.
-	// SetDefaultCommand(new MySpecialCommand());
-}
-
-// Put methods for controlling this subsystem
-// here. Call these from Commands.
+class TurretCMD : public frc::Command {
+ public:
+  TurretCMD();
+  void Initialize() override;
+  void Execute() override;
+  bool IsFinished() override;
+  void End() override;
+  void Interrupted() override;
+};

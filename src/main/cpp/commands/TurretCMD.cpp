@@ -5,29 +5,25 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "MyAutoCommand.h"
+#include "commands/TurretCMD.h"
 
-#include "../Robot.h"
-
-MyAutoCommand::MyAutoCommand() {
-	// Use Requires() here to declare subsystem dependencies
-	Requires(&Robot::m_subsystem);
+TurretCMD::TurretCMD() {
+  // Use Requires() here to declare subsystem dependencies
+  // eg. Requires(Robot::chassis.get());
 }
 
 // Called just before this Command runs the first time
-void MyAutoCommand::Initialize() {}
+void TurretCMD::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
-void MyAutoCommand::Execute() {}
+void TurretCMD::Execute() {}
 
 // Make this return true when this Command no longer needs to run execute()
-bool MyAutoCommand::IsFinished() {
-	return false;
-}
+bool TurretCMD::IsFinished() { return false; }
 
 // Called once after isFinished returns true
-void MyAutoCommand::End() {}
+void TurretCMD::End() {}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void MyAutoCommand::Interrupted() {}
+void TurretCMD::Interrupted() {}

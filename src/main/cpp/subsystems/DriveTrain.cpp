@@ -32,17 +32,20 @@ void DriveTrain::StopMotors()
 }
 void DriveTrain::Drive(double left, double right)
 {
-    drive.ArcadeDrive(left, right);
+    m_leftDriveMotor.Set(left + right);
+    m_rightDriveMotor.Set(left-right);
+    //drive.ArcadeDrive(left, right);
 }
 
 void DriveTrain::TeleopDrive(XboxController* controller)
 {
     double leftY = controller->GetY(GenericHID::kLeftHand);
     double leftX = controller->GetX(GenericHID::kLeftHand);
-    leftY = Limit(1, -1, leftY);
-    leftX = Limit(1, -1, leftX);
-
-    Drive(-leftY, leftX);
+    double leftYlimit = Limit(1, -1, leftY);
+    double leftXlimit = Limit(1, -1, leftX);
+    
+    m_leftDriveMotor.Set(leftYlimit + leftXlimit);
+    m_rightDriveMotor.Set(leftYlimit - leftXlimit);
 }
 
 double DriveTrain::Limit(double upperLimit, double lowerLimit, double value)

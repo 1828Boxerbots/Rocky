@@ -25,11 +25,11 @@
 // constexpr int kRangeFinderModule = 1;
 
 //PWM Ports
-constexpr int LEFT_DRIVE_MOTOR_PORT = 0;
-constexpr int RIGHT_DRIVE_MOTOR_PORT = 1;
-constexpr int PICKUP_PORT = 2;
-constexpr int SHOOTER_PORT = 3;
-constexpr int TURRENT_PORT = 4;
+constexpr int LEFT_DRIVE_MOTOR_PORT = 2;
+constexpr int RIGHT_DRIVE_MOTOR_PORT = 3;
+constexpr int PICKUP_PORT = 9;
+constexpr int SHOOTER_PORT = 4;
+constexpr int TURRET_PORT =5;
 
 //usb ports
 constexpr int XBOX_PORT = 0;

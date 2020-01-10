@@ -11,13 +11,15 @@
 #include <frc/commands/Command.h>
 #include <frc/smartdashboard/SendableChooser.h>
 #include <memory.h>
+#include "commands/TeleOpDriveCMD.h"
 
 #include "OI.h"
 #include "subsystems/DriveTrain.h"
 
 using namespace std;
 using namespace frc;
-class Robot : public TimedRobot {
+class Robot : public TimedRobot 
+{
  public:
   static shared_ptr<OI> m_pOi;
   static shared_ptr<DriveTrain> m_pDriveTrain;
@@ -33,6 +35,7 @@ class Robot : public TimedRobot {
   void TestPeriodic() override;
 
  private:
+  TeleOpDriveCMD teleopCMD;
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
 };

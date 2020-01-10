@@ -9,7 +9,7 @@
 
 #include <frc/Spark.h>
 #include <frc/XboxController.h>
-#include <frc/Drive/DifferentialDrive.h>
+//#include <frc/Drive/DifferentialDrive.h>
 
 #include "RobotMap.h"
 
@@ -21,7 +21,7 @@ class DriveTrain : public Subsystem
     Spark m_leftDriveMotor{LEFT_DRIVE_MOTOR_PORT};
     Spark m_rightDriveMotor{RIGHT_DRIVE_MOTOR_PORT};
 
-    DifferentialDrive drive {m_leftDriveMotor, m_rightDriveMotor};
+    //DifferentialDrive drive {m_leftDriveMotor, m_rightDriveMotor};
  public:
   DriveTrain();
   void StopMotors();
